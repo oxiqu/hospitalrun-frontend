@@ -84,7 +84,7 @@
     </thead>
     <tbody>
       {{#each sortedVisits as |visit|}}
-        <tr {{action 'editVisit' visit}} class="clickable">
+        <tr {{action 'editVisit' visit}} role="button" class="clickable">
           <td class="col-xs-1">{{visit.patient.displayPatientId}}</td>
           <td class="col-xs-1">{{visit.patient.shortDisplayName}}</td>
           <td class="col-xs-1">{{visit.patient.sex}}</td>

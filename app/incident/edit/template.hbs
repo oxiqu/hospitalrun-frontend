@@ -149,7 +149,7 @@
                     <td>{{attachment.title}}</td>
                     <td>
                       <button class="btn btn-default neutral" {{action "showEditAttachment" attachment}}>{{t 'incident.buttons.edit'}}</button>
-                      <a href={{attachment.url}} target="_blank" download="{{attachment.shortFileName}}" class="btn btn-default">
+                      <a href={{attachment.url}} rel="noopener" target="_blank" download="{{attachment.shortFileName}}" class="btn btn-default">
                         <span class="glyphicon glyphicon-download" aria-hidden="true"></span> {{t 'incident.buttons.download'}}
                       </a>
                       <button class="btn btn-default warning" {{action "showDeleteAttachment" attachment bubbles=false }}><span class="octicon octicon-x"></span> {{t 'incident.buttons.delete'}}</button>

@@ -25,7 +25,7 @@
         <th>{{t 'labels.actions'}}</th>
       </tr>
       {{#each sortedOrders as |order|}}
-        <tr {{action "editOrder" order}}>
+        <tr {{action "editOrder" order}} role="button">
           <td>{{date-format order.requestedDate format="l h:mm A"}}</td>
           <td>{{order.name}}</td>
           <td>{{order.orderType}}</td>

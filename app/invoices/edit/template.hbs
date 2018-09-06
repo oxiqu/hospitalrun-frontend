@@ -70,7 +70,7 @@
               <tr>
                 <td class="col-xs-5">
                   <div class="input-group">
-                    <span class="input-group-addon glyphicon
+                    <span role="button" class="input-group-addon glyphicon
                       {{if item.showDetails 'glyphicon-minus' 'glyphicon-plus'}}"
                         {{action "toggleDetails" item bubbles=false }}>
                     </span>
@@ -241,7 +241,7 @@
           <th>{{t 'labels.action'}}</th>
         </tr>
         {{#each model.payments as |payment|}}
-          <tr {{action 'showEditPayment' payment}}>
+          <tr role="button" {{action 'showEditPayment' payment}}>
             <td>{{date-format payment.datePaid}}</td>
             <td>{{payment.amount}}</td>
             <td>{{payment.paymentType}}</td>

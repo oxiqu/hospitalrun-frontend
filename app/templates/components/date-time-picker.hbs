@@ -1,4 +1,4 @@
-{{#em-form model=this submitButton=false as |form|}}
+{{#em-form model=this submitButton=false}}
   {{date-picker model=this property="dateTimePickerDate" label=label class=(concat 'col-sm-4 ' datePickerClass) dateSetAction="dateChanged"}}
   {{#unless isAllDay}}
     <div class="form-input-group col-sm-3 required">

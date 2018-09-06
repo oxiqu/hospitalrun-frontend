@@ -11,7 +11,7 @@
         {{/if}}
       </tr>
       {{#each model as |profile|}}
-        <tr {{action 'editItem' profile}} class="clickable">
+        <tr {{action 'editItem' profile}} role="button" class="clickable">
           <td class="pricing-profile-name">{{profile.name}}</td>
           <td>{{profile.discountAmount}}</td>
           <td>{{profile.discountPercentage}}</td>
@@ -31,7 +31,7 @@
     </table>
   {{else}}
     <div class="alert alert-info">
-      <p>{{t 'billing.alerts.noPricingProfiles'}}. {{#if canAdd}}<a href="#" {{action 'newItem'}}>{{t 'messages.createNewRecord'}}</a>{{/if}}</p>
+      <p>{{t 'billing.alerts.noPricingProfiles'}}. {{#if canAdd}}<a href="#" role="button" {{action 'newItem'}}>{{t 'messages.createNewRecord'}}</a>{{/if}}</p>
     </div>
   {{/if}}
 {{/item-listing}}

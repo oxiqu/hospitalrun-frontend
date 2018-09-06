@@ -1,4 +1,4 @@
-<div {{action 'linkToPatient'}} class="clearfix">
+<div {{action 'linkToPatient'}} role="button" class="clearfix">
 
   <div class="ps-info-group patient-id">
     <label class="ps-info-label">{{t 'labels.id'}}</label>
@@ -35,7 +35,7 @@
       <div class="ps-info-data-block">
         {{#each patientProcedures as |procedure index|}}
           {{#unless (eq index 0)}}, {{/unless}}
-          <a {{action 'editProcedure' procedure}} class="clickable patient-procedure">
+          <a {{action 'editProcedure' procedure}} role="button" class="clickable patient-procedure">
             {{procedure.description}} (<strong>{{date-format procedure.procedureDate}}</strong>)
           </a>
         {{/each}}
@@ -49,14 +49,14 @@
     <div class="ps-info-group long-form">
       <label class="ps-info-label wide">{{t 'patients.labels.operativePlan'}}</label>
        {{#unless currentOperativePlan}}
-        <a class="clickable" {{action "addOperativePlan" bubbles=false }}>
+        <a class="clickable" role="button" {{action "addOperativePlan" bubbles=false }}>
           <span class="octicon octicon-plus"></span>
           {{t 'patients.buttons.addOperativePlan' }}
         </a>
       {{/unless}}
       <div class="ps-info-data-block">
         {{#if currentOperativePlan}}
-          <a class="clickable" {{action "editOperativePlan" currentOperativePlan bubbles=false }}>
+          <a class="clickable" role="button" {{action "editOperativePlan" currentOperativePlan bubbles=false }}>
             {{t 'patients.buttons.editOperativePlan' }}
           </a>
         {{/if}}

@@ -61,7 +61,7 @@
         {{/if}}
       </tr>
       {{#each sortedIncidents as |incident|}}
-        <tr class="incident-row" {{action 'editItem' incident}}>
+        <tr role="button" class="incident-row" {{action 'editItem' incident}}>
           <td class="incident-date">{{date-format incident.dateOfIncident}}</td>
           <td class="incident-department">{{incident.department}}</td>
           <td class="incident-category">{{incident.categoryName}}</td>

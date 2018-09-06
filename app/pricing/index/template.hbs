@@ -14,7 +14,7 @@
         {{/if}}
       </tr>
       {{#each model as |pricingItem|}}
-        <tr {{action 'editItem' pricingItem}} class="clickable">
+        <tr {{action 'editItem' pricingItem}} role="button" class="clickable">
           {{#if showCategory}}
             <td>{{pricingItem.category}}</td>
           {{/if}}
@@ -39,7 +39,7 @@
     </table>
   {{else}}
     <div class="alert alert-info">
-      <p>{{t 'billing.alerts.noPricingItems'}} {{#if canAdd}}<a href="#" {{action 'newItem'}}>{{t 'messages.createNewRecord'}}</a>{{/if}}</p>
+      <p>{{t 'billing.alerts.noPricingItems'}} {{#if canAdd}}<a href="#" role="button" {{action 'newItem'}}>{{t 'messages.createNewRecord'}}</a>{{/if}}</p>
     </div>
   {{/if}}
 {{/item-listing}}

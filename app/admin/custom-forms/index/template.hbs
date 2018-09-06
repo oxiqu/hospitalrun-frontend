@@ -9,7 +9,7 @@
     </tr>
     {{#each model as |customForm|}}
       {{#unless customForm.archived}}
-        <tr {{action 'editItem' customForm}} class="clickable">
+        <tr {{action 'editItem' customForm}} role="button" class="clickable">
           <td class="custom-form-name">{{customForm.name}}</td>
           <td>
             {{#if customForm.formType}}

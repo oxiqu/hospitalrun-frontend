@@ -1,4 +1,4 @@
-<span {{action 'sort'}}>
+<span {{action 'sort'}} role="button">
   {{#if sorted}}
     <span class="octicon {{if sortDesc 'octicon-triangle-down' 'octicon-triangle-up'}}"></span>
   {{else}}
@@ -17,13 +17,13 @@
       {{/if}}
       {{#if (eq 'list' filterType )}}
         <li>
-          <a {{action 'filter' bubbles=false}}>
+          <a {{action 'filter' bubbles=false}} role="button">
             {{t 'components.sortableColumn.labels.selectAll' }}
           </a>
         </li>
         {{#each filterValues as |filterValue|}}
           <li>
-            <a {{action 'filter' filterValue bubbles=false}}>{{filterValue}}</a>
+            <a {{action 'filter' filterValue bubbles=false}} role="button">{{filterValue}}</a>
           </li>
         {{/each}}
       {{/if}}

@@ -95,7 +95,7 @@
         <div class="row">
           {{#each model.photos as |photo|}}
             <div class="col-sm-4 col-md-3">
-              <div {{action "editPhoto" photo}} class="thumbnail">
+              <div {{action "editPhoto" photo}} role="button" class="thumbnail">
                 {{photo-display photo=photo }}
                 <div class="caption">
                   {{photo.caption}}

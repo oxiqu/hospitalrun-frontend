@@ -1,5 +1,5 @@
 {{#if show}}
-  <div class="category-title" {{action 'toggleContent'}}>
+  <div class="category-title" role="button" {{action 'toggleContent'}}>
     {{#link-to nav.route class="primary-section-link nav-link"}}
       <span class="mega-octicon {{nav.iconClass}}"></span>{{nav.localizedTitle}}
     {{/link-to}}
@@ -8,7 +8,7 @@
     <div class="category-sub-items">
       {{#each nav.subnav as |subnav|}}
         {{#if subnav.show}}
-          <div {{action 'resetNav'}}>
+          <div {{action 'resetNav'}} role="button">
             {{#if subnav.subroute}}
               {{#link-to subnav.route subnav.subroute class="category-sub-item nav-link"}}
                 <span class="octicon {{subnav.iconClass}}"></span>{{subnav.localizedTitle}}

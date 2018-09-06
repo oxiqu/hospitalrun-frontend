@@ -13,7 +13,7 @@
         {{/if}}
       </tr>
       {{#each model as |medicationRequest|}}
-        <tr {{action 'editItem' medicationRequest}} class="clickable">
+        <tr {{action 'editItem' medicationRequest}} role="button" class="clickable">
           <td>{{date-format medicationRequest.prescriptionDate format="l h:mm A"}}</td>
           <td>{{medicationRequest.patient.displayName}}</td>
           <td>{{medicationRequest.requestedBy}}</td>
@@ -30,7 +30,7 @@
     </table>
   {{else}}
     <div class="alert alert-info">
-      <p>{{t 'messages.noItemsFound'}} {{#if canAdd}}<a href="#" {{action 'newItem'}}>{{t 'medication.messages.createNew'}}</a>{{/if}}</p>
+      <p>{{t 'messages.noItemsFound'}} {{#if canAdd}}<a href="#" role="button" {{action 'newItem'}}>{{t 'medication.messages.createNew'}}</a>{{/if}}</p>
     </div>
   {{/if}}
 {{/item-listing}}

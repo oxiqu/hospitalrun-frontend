@@ -7,7 +7,7 @@
       </tr>
       {{#each model as |category|}}
         {{#unless category.archived}}
-          <tr {{action 'editItem' category}}>
+          <tr role="button" {{action 'editItem' category}}>
             <td class="incident-catergory-name">{{category.incidentCategoryName}}</td>
             <td>
                 <button class="btn btn-default neutral" {{action 'editItem' category  bubbles=false }}>{{t 'incident.buttons.edit'}}</button>

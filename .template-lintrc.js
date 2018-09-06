@@ -5,9 +5,9 @@ module.exports = {
   extends: 'recommended',
   rules:{
     'block-indentation': false,
-    'html-comments': true,
+    'no-html-comments': true,
     'self-closing-void-elements': true,
-    'nested-interactive': false,
-    'bare-strings':true
+    'no-nested-interactive': false,
+    'no-bare-strings':true
   }
 };
