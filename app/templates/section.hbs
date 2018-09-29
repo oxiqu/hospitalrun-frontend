@@ -7,10 +7,10 @@
           <button class="btn btn-primary" {{action newButtonAction}}>{{newButtonText}}</button>
         {{/if}}
         {{#if additionalButtons}}
-          {{#each additionalButtons as |button|}}
-            <button class={{button.class}} {{action button.buttonAction}}>
-              {{#if buttonIcon}}<span class={{button.buttonIcon}}></span>{{/if}}
-              {{button.buttonText}}
+          {{#each additionalButtons as |btn|}}
+            <button class={{button.class}} {{action btn.buttonAction}}>
+              {{#if buttonIcon}}<span class={{btn.buttonIcon}}></span>{{/if}}
+              {{btn.buttonText}}
             </button>
           {{/each}}
         {{/if}}

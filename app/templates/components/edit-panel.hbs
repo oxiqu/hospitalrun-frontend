@@ -13,17 +13,17 @@
     {{#if editPanelProps.showUpdateButton}}
       <button class="btn btn-primary on-white {{if editPanelProps.disabledAction 'disabled-btn'}}" {{action editPanelProps.actionForUpdateButton}}>
         {{#if editPanelProps.updateButtonIcon}}
-          <span class="{{editPanelProps.updateButtonIcon}}"></span>
+          <i class="{{editPanelProps.updateButtonIcon}}"></i>
         {{/if}}
           {{editPanelProps.updateButtonText}}
       </button>
     {{/if}}
-    {{#each editPanelProps.additionalButtons as |button|}}
-      <button class="{{button.class}}" {{action 'fireButtonAction' button.buttonAction}}>
-        {{#if button.buttonIcon}}
-          <span class="{{button.buttonIcon}}"></span>
+    {{#each editPanelProps.additionalButtons as |btn|}}
+      <button class="{{btn.class}}" {{action 'fireButtonAction' btn.buttonAction}}>
+        {{#if btn.buttonIcon}}
+          <i class="{{btn.buttonIcon}}"></i>
         {{/if}}
-        {{button.buttonText}}
+        {{btn.buttonText}}
       </button>
     {{/each}}
   </div>

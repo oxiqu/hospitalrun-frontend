@@ -6,7 +6,7 @@
       {{/if}}
       <div class="ps-info-data-block">
         {{#each primaryDiagnoses as |diagnosis index|}}
-          {{#unless (eq index 0)}}, {{/unless}}
+          {{#if (not index 0)}}, {{/if}}
           {{#if canAddDiagnosis}}
             <a class="clickable primary-diagnosis" role="button" {{action "editDiagnosis" diagnosis bubbles=false}}>
               {{diagnosis.diagnosis}} (<strong>{{date-format diagnosis.date}}</strong>)
@@ -26,7 +26,7 @@
       <label class="ps-info-label wide">{{secondaryDiagnosisLabel}}</label>
       <div class="ps-info-data-block">
         {{#each secondaryDiagnoses as |diagnosis index|}}
-          {{#unless (eq index 0)}}, {{/unless}}
+          {{#if (not index 0)}}, {{/if}}
           {{#if canAddDiagnosis}}
             <a class="clickable secondary-diagnosis" role="button" {{action "editDiagnosis" diagnosis bubbles=false}}>
               {{diagnosis.diagnosis}} (<strong>{{date-format diagnosis.date}}</strong>)

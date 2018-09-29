@@ -34,7 +34,7 @@
       <label class="ps-info-label wide">{{t 'labels.procedures'}}</label>
       <div class="ps-info-data-block">
         {{#each patientProcedures as |procedure index|}}
-          {{#unless (eq index 0)}}, {{/unless}}
+          {{#if (not index 0)}}, {{/if}}
           <a {{action 'editProcedure' procedure}} role="button" class="clickable patient-procedure">
             {{procedure.description}} (<strong>{{date-format procedure.procedureDate}}</strong>)
           </a>

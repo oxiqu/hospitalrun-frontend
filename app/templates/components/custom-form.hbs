@@ -1,3 +1,5 @@
+{{! template-lint-disable simple-unless }}
+
 {{#each fieldsByRow as |row|}}
   <div class="row form-group">
     {{#each row as |field|}}
@@ -47,13 +49,13 @@
       {{#if (eq field.type 'select')}}
         {{#unless isReadonly}}
           {{rapidForm.select label=field.label
-            model=model
-            property=(concat propertyPrefix field.property)
-            content=field.values
-            class=(concat 'form-input-group ' field.displayClassNames)
-            prompt=field.prompt
-            optionValuePath="label"
-            optionLabelPath="label"
+                             model=model
+                             property=(concat propertyPrefix field.property)
+                             content=field.values
+                             class=(concat 'form-input-group ' field.displayClassNames)
+                             prompt=field.prompt
+                             optionValuePath="label"
+                             optionLabelPath="label"
           }}
         {{else}}
           <div class="{{field.displayClassNames}}">

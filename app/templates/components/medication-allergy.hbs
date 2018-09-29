@@ -7,7 +7,7 @@
 
   <div class="ps-info-data-block allergy-list">
     {{#each patient.allergies as |allergy index|}}
-      {{#unless (eq index 0)}}, {{/unless}}
+      {{#if (not index 0)}}, {{/if}}
       {{#if canAddAllergy}}
         <a class="clickable allergy-button"  role="button" {{action "editAllergy" allergy bubbles=false }}>{{allergy.name}}</a>
       {{else}}
